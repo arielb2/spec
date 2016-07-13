@@ -1,0 +1,35 @@
+From 1294ed846c0f4fa7bb4475cc29ec566ab222a2a7 Mon Sep 17 00:00:00 2001
+From: Ralph Bean <rbean@redhat.com>
+Date: Sun, 22 Apr 2012 21:15:10 -0400
+Subject: [PATCH] Unbundle fonts.
+
+---
+ fabulous/text.py |    8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/fabulous/text.py b/fabulous/text.py
+index 4a063aa..35decfc 100644
+--- a/fabulous/text.py
++++ b/fabulous/text.py
+@@ -97,7 +97,7 @@ class Text(image.Image):
+     """
+ 
+     def __init__(self, text, fsize=20, color="#0099ff", shadow=False,
+-                 skew=None, font='IndUni-H-Bold'):
++                 skew=None, font='LiberationSans-Regular'):
+         utils.pil_check()
+         from PIL import Image, ImageFont, ImageDraw
+         self.text = text
+
+@@ -218,7 +218,7 @@ def main(args):
+               "this value to the proper background so semi-transparent "
+               "pixels will blend properly."))
+     parser.add_option(
+-        "-F", "--font", dest="font", default='IndUni-H-Bold',
++        "-F", "--font", dest="font", default='LiberationSans-Regular',
+         help=("Path to font file you wish to use.  This defaults to a "
+               "free Helvetica-Bold clone which is included with Fabulous.  "
+               "Default value: %default"))
+-- 
+1.7.10
+
